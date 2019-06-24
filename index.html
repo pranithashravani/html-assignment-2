@@ -31,7 +31,8 @@
                     
                     
                     
-                    <a href="#nav-main" class="btn btn-secondary-outline btn-sm" role="button">&darr;</a>
+                    <a href="#section1" class="btn btn-secondary-outline btn-sm" role="button" data-toggle="tooltip">&darr;</a>
+                
                 </div>
             </div>
         </div>
@@ -42,6 +43,10 @@
     
     <nav class="navbar navbar-dark bg-inverse navbar-full navbar-fixed-top" id="nav-main">
         <a class="navbar-brand" href="#">Hashtag Foodie</a>
+      <button class="navbar-toggler hidden-md-up pull-xs-right" data-target="#collapsenav" data-toggle="collapse" type="button">
+            ☰
+        </button>
+        <div class="navbar-toggleable-sm collapse pull-md-right text-xs-center" id="collapsenav">
         <ul class="nav navbar-nav">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -78,6 +83,7 @@
             <input class="form-control" type="text" placeholder="Search">
             <button class="btn btn-danger-outline" type="submit">Search</button>
         </form>
+      </div>
     </nav>
     <!--First section after Header-->
     <section id="section1">
@@ -283,7 +289,9 @@
           
           </div>
       
-    
+     <div id="go-up">
+          <a href="#cover" class="btn btn-secondary-outline btn-sm" role="button" data-toggle="tooltip">Go up</a>
+    </div>
     <footer id="footer-main">
         <div class="container">
             <p id="ftr">Copyrights <i class="material-icons">
@@ -311,6 +319,12 @@
     </footer>
 
     <!-- jQuery first, then Bootstrap JS. -->
+      <script>
+            $(document).ready(function(){
+                // Initialize Tooltip
+                $('[data-toggle="tooltip"]').tooltip();
+            })
+            </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
